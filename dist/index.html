@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- <link rel="stylesheet" href="../node_modules/rangeslider-pure/dist/range-slider.css"> -->
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__top">
+            <div class="header__top-logo"></div>
+            <button type="button" class="header__top-login">
+                <div class="header__top-button">
+                    <div class="icon">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                            <path
+                                d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div style="margin-left: 8px;">Login</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="header__inner">
+            <div class="header__inner-quest">Need Money Fast?</div>
+            <div class="header__inner-description">Get up to Rp. 2 000 000 within just 1 hour!</div>
+            <div class="header__image-wrapper"><img class="header__image" src="../img/girl.png" alt=""></div>
+        </div>
+        <!-- <div class="header__image"></div> -->
+    </header>
+    <section class="calculations">
+        <div class="container">
+            <div class="calculations__inner">
+                <div class="calculations__ranges">
+                    <h3 class="caclulations__ranges-pick">Pick Amount</h3>
+                    <div class="calculations__text">
+                        <p class="calculations__text-item calculations__text-item--icon">Rp. 1 500 000</p>
+                    </div>
+                    <div class="calculations__rangeslider">
+                        <div class="calculations__range">
+                            <small class="min pull-left">100000</small>
+                            <small class="max pull-right">2000000</small>
+                        </div>
+                        <input class="rangeslider" type="range" min="1000000" max="2000000" step="100000"
+                            value="1500000" data-buffer="10" />
+
+                    </div>
+
+                    <h3 class="calculations__ranges-term">Credit Term</h3>
+                    <div class="calculations__text">
+                        <p class="calculations__text-item">20 days</p>
+                    </div>
+                    <div class="calculations__rangeslider">
+                        <div class="calculations__range">
+                            <small class="min pull-left">10</small>
+                            <small class="max pull-right">30</small>
+                        </div>
+                        <input type="range" class="rangeslider" min="10" max="30" step="1" value="20"
+                            data-buffer="10" />
+                    </div>
+                </div>
+                <div class="calculations__result">
+                    <h3 class="calculations__result-summary">Loan Summary</h3>
+                    <div class="calculations__loan-summary">
+                        <label for="calculations__loan-item">Loan Amount</label><input id="loan-amount"
+                            class='calculations__loan-item' type='number' step="100000" min="100000" max="2000000"
+                            value="100000">
+                    </div>
+                    <div class="calculations__loan-summary">
+                        <label for="calculations__loan-item">Service Fee</label><input id='interest-rate' type='number'
+                            value="10" class='calculations__loan-item' min="10" max="25">
+                    </div>
+                    <hr class="calculations__loan-line credit-about__line">
+                    <div class="calculations__loan-summary">
+                        <label for="calculations__loan-item">Total Payments</label><input id="total-payments"
+                            class='calculations__loan-item'>
+                    </div>
+                    <div class="calculations__loan-summary">
+                        <label for="calculations__loan-item">Due Date</label><input type="date"
+                            class='calculations__loan-item' value='2020-05-01' min="2020-05-01" max="2020-12-31">
+                    </div>
+                    <button class="calculations__button " onclick="calculate()">Get money</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="credit-about">
+        <h2 class="credit-about__title">How it works!</h2>
+        <div class="container">
+            <div class="credit-about__content">
+                <div class="credit-about__content-item">
+                    <div class='content__images'>
+                        <img class='content__img' src="../img/Resourse_106-100.jpg" alt="pick">
+                        <img class="content__arrow" src="../img/Resourse_102-100.jpg" alt="arrow">
+                    </div>
+                    <h5 class="content__title">Pick Amount and Term</h5>
+                    <p class="content__description">Done online; You can apply for a loan anywhere and anytime, either
+                        from
+                        home, from the
+                        office, in the mornings or evenings. Save your time to worthwhile activities.</p>
+                </div>
+                <div class="credit-about__content-item">
+                    <div class="content__images">
+                        <img class='content__img' src="../img/Resourse_107-100.jpg" alt="clock">
+                        <img class="content__arrow" src="../img/Resourse_102-100.jpg" alt="arrow">
+                    </div>
+                    <h5 class="content__title">We review quote in 4 hours</h5>
+                    <p class="content__description">If your loan application is approved, we transfer directly into your
+                        account within the same day.</p>
+                </div>
+                <div class="credit-about__content-item">
+                    <img class='content__img' src="../img/Resourse_108-100.jpg" alt="pick">
+                    <h5 class="content__title">Get money!</h5>
+                    <p class="content__description">You can find out all the fees charged from the start you apply for a
+                        loan, and you have the flexibility to set the period and cost of the service adapts to the
+                        period of the loan. The faster, the smaller the service fees paid.</p>
+                </div>
+            </div>
+            <hr class="credit-about__line">
+        </div>
+    </section>
+    <section class="faq-section">
+        <h3 class="faq__title">Frequently Asked Questions</h3>
+        <div class="container">
+            <div class="faq__set">
+                <span class="faq__question">What are the requirements to apply for a loan in Kredit24?</span>
+                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque illum omnis
+                    laborum doloremque laboriosam nisi hic harum delectus tempore iusto magnam blanditiis quos autem
+                    natus, perspiciatis. Assumenda, quae, doloremque.</p>
+            </div>
+
+            <div class="faq__set">
+                <span class="faq__question">How much loan amount can be submitted?</span>
+                <p class="faq__answer">Loans that can be raised is a minimum of Rp. 1 000 000 up to a maximum of Rp. 2
+                    000 000. If you are a good customer, for a loan to the 3rd and so on, you can apply for loans up to
+                    Rp. 3 000 000.</p>
+            </div>
+            <div class="faq__set">
+                <span class="faq__question">How do I apply for a loan?</span>
+                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque illum omnis
+                    laborum doloremque laboriosam nisi hic harum delectus tempore iusto magnam blanditiis quos autem
+                    natus, perspiciatis. Assumenda, quae, doloremque.</p>
+            </div>
+            <div class="faq__set">
+                <span class="faq__question">How does the system of repayment?</span>
+                <p class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque illum omnis
+                    laborum doloremque laboriosam nisi hic harum delectus tempore iusto magnam blanditiis quos autem
+                    natus, perspiciatis. Assumenda, quae, doloremque.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <span>&copy;2020 Credit24/7.com</span>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/libs.min.js'></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
