@@ -1,0 +1,77 @@
+@import 'libs';
+@import 'vars';
+@import 'fonts';
+
+@media(min-width: 768px) {
+    .container {
+        padding: 0px 24px 0px 24px;
+    }
+
+    .header__quest {
+        padding-left: 24px;
+    }
+
+    .header {
+        &__quest-mark {
+            width: auto;
+            font-size: 36px;
+            line-height: 36px;
+        }
+
+        &__quest-description {
+            width: auto;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    .header__top-login {
+        display: block;
+    }
+
+    .menu__btn {
+        display: none;
+    }
+
+    .header__main-image {
+        transform: scale(1.5);
+    }
+
+    .modal-content {
+
+        width: auto;
+    }
+
+    .special-container {
+        width: initial;
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: center;
+        justify-content: center;
+
+        &__text {
+            margin-left: 50px;
+        }
+
+        &__inputs {
+            margin-top: 142px;
+        }
+    }
+
+    .modal1 {
+
+        &__images {
+            display: none;
+        }
+
+        &__text3 {
+            display: none;
+        }
+
+        &__description {
+            flex-direction: column;
+            width: 521px;
+        }
+
+    }
+}

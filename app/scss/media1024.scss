@@ -1,0 +1,38 @@
+@import 'libs';
+@import 'vars';
+@import 'fonts';
+
+@media(min-width: 1024px) {
+
+    .container {
+        padding: 0px 54px 0px 54px;
+    }
+
+    .header__quest {
+        padding-left: 54px;
+    }
+
+    .header {
+        &__quest-mark {
+            width: auto;
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        &__quest-description {
+            width: auto;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+}
+
+// .modal1 {
+//     &__description {
+//         width: 103%;
+//     }
+
+// .faq__title {
+//     font-size: 1000px;
+//     line-height: 42px;
+// }

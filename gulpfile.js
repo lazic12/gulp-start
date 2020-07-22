@@ -35,7 +35,7 @@ gulp.task('css', function () {
             'node_modules/normalize.css/normalize.css',
             'node_modules/slick-carousel/slick/slick.css',
             // 'node_modules/magnific-popup/dist/magnific-popup.css'
-            'node_modules/rangeslider-pure/dist/range-slider.css',
+            // 'node_modules/rangeslider-pure/dist/range-slider.css'
             'node_modules/rangeslider.js/dist/rangeslider.css'
         ])
         .pipe(concat('_libs.scss'))
@@ -69,7 +69,7 @@ gulp.task('js', function () {
     return gulp.src([
             'node_modules/slick-carousel/slick/slick.js',
             // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
-            'node_modules/rangeslider-pure/dist/range-slider.js',
+            // 'node_modules/rangeslider-pure/dist/range-slider.js',
             'node_modules/rangeslider.js/dist/rangeslider.js'
         ])
         .pipe(concat('libs.min.js'))
@@ -106,4 +106,4 @@ gulp.task('export', async function () {
 
 gulp.task('build', gulp.series('clean', 'export'))
 
-gulp.task('default', gulp.parallel('css', 'scss', 'js', 'browser-sync', 'watch'))
+gulp.task('default', gulp.parallel('css', 'scss', 'js', 'browser-sync', 'watch'));
